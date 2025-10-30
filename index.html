@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Junho Kee</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="content-box">
+  <header>
+    <div class="image-flicker">
+        <img id="flicker-img" src="images/logo.png" alt="Flicker Image">
+        <script>
+            const images = [
+                "images/logo.png",
+                "images/logoj.png",
+                "images/logou.png",
+                "images/logon.png",
+                "images/logoh.png",
+                "images/logoo.png"
+            ];
+
+
+            const flickerImg = document.getElementById("flicker-img");
+            let normalImage = images[0]; // default image
+
+            function randomFlicker() {
+            // pick a random image different from current
+            let newImage;
+            do {
+                newImage = images[Math.floor(Math.random() * images.length)];
+            } while(newImage === flickerImg.src.split("/").pop()); // avoid same image
+
+            flickerImg.src = newImage;
+
+            // return to normal after a short flicker
+            setTimeout(() => {
+                flickerImg.src = normalImage;
+            }, (Math.random() * 300) + 100); // flicker duration (200ms)
+            }
+
+            // trigger flicker randomly every 2–5 seconds
+            setInterval(() => {
+            const chance = Math.random(); // 0–1
+            if (chance < 0.9) {          // 30% chance to flicker
+                randomFlicker();
+            }
+            }, 2000); // check every 2 seconds
+        </script>
+    </div>
+
+  </header>
+  <header>
+
+  </header>
+  <h2 class = "centered"> ENGINEER-ARTIST-PROGRAMMER</h2>
+  <div class = "left-right">
+    <section id="about">
+        <img src="images/headshot.jpg" alt="headshot" class="headshot-img">
+
+    </section>
+    <div class = "right-text">
+        <p> Hello, I'm Junho</p>
+        <p> I am a senior in Bergen County Academies, and I am in the Academy of Engineering and Deisgn Technology.</p> 
+        <p> I lived in four different countries: Korea, Austria, Jordan, and the US.</p>
+        <p> My Hobby is drawing or playing videogames, and I want to make a videogame some day!</p>
+        <p> Feel free to navigate and view my projects below :) </p>
+   
+    </div>
+
+
+  </div>
+  <div class = "left-right">
+        <nav>
+            <a href="art.html" target="_blank">
+                <img src="images/poo.jpg" alt="Art Navigation" class = "nav-img">
+                <h1>Paintings</h1>
+
+            </a>
+            <a href="interactive.html" target="_blank">
+                <img src="images/bl.jpg" alt="Art Navigation" class = "nav-img">
+                <h1>Interactive Art</h1>
+            </a>
+  
+            <a href="research.html" target="_blank">
+                <img src="images/research.png" alt="Art Navigation" class = "nav-img">
+                <h1>Research</h1>
+            </a>
+        </nav>
+  </div>
+
+</div>
+</body>
+</html>
