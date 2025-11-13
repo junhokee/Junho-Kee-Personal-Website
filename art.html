@@ -19,14 +19,14 @@
   <main class="projects-container">
     <div class="project-card">
       <h2>Plight of Oblivion</h2>
-      <img src="images/poo.jpg" alt="Plight of Oblivion">
+      <img src="images/poo.jpg" alt="Plight of Oblivion" class="thumbnail" onclick="openPopup(this.src)">
       <p>Medium: Acrylic on Canvas</p>
       <p>Description: In a room full of treasure lies a deceitful monster, ready to consume whomever oblivious enough to approach a chest surrounded by the remains of the predecessors.</p>
     </div>
 
     <div class="project-card">
       <h2>Facing My Fears</h2>
-      <img src="images/fear.jpg" alt="Facing my Fears">
+      <img src="images/fear.jpg" alt="Facing my Fears" class="thumbnail" onclick="openPopup(this.src)">
       <p>Medium: Acrylic on Canvas</p>
       <p>"Facing My Fears" is a painting that captures an iridescent and dreamlike atmosphere. At its heart, the artwork portrays a courageous boy wielding his blankets as a sword against the monsters emerging from his nightmares. 
 </p>
@@ -35,13 +35,13 @@
     
     <div class="project-card">
         <h2>Sound-Responsive Robot Art</h2>
-        <img src="images/crickit.jpg" alt="Plight of Oblivion">
+        <img src="images/crickit.jpg" alt="Plight of Oblivion" class="thumbnail" onclick="openPopup(this.src)">
         <p>Medium: Acrylic on Canvas</p>
         <p>A scrumptious futuristic bag of cricket chips! Multiple factors such as climate change, overpopulation, and dwindling made considering alternative food sources important, and insects stand out as a realistic choice. 
     </div>
     <div class="project-card">
         <h2>Behind the Screen, Beyond Respect</h2>
-        <img src="images/phone.jpg" alt="phone">
+        <img src="images/phone.jpg" alt="phone" class="thumbnail" onclick="openPopup(this.src)">
         <p>Medium: Acrylic on Canvas</p>
         <p>Two people fight over text as the argument intensifies: messages start extending beyond the screen, soon becoming a discourse the phone screen cannot handle.
 </p>
@@ -49,24 +49,37 @@
     
     <div class="project-card">
       <h2>The Hidden Glow</h2>
-      <img src="images/thg.jpeg" alt="thg">
+      <img src="images/thg.jpeg" alt="thg" class="thumbnail" onclick="openPopup(this.src)">
       <p>Medium: Acrylic on Canvas</p>
       <p>A ghostly goblin shark is surrounded by bioluminescent marine organisms, each glowing faintly against the dark abyss. The intricate interplay of life forms, from microscopic plankton to jellyfish, evokes the fragile balance of this alien ecosystem. The artwork highlights both the mystery and interconnectedness of deep-sea life, illuminating a hidden world often unseen by the human eye.
 </p>
     </div>
     <div class="project-card">
       <h2>Under the Sewer</h2>
-      <img src="images/uts.jpeg" alt="uts">
+      <img src="images/uts.jpeg" alt="uts" class="thumbnail" onclick="openPopup(this.src)">
       <p>Medium: Acrylic on Canvas</p>
       <p>"Under the Sewer" depicts a dark, slum-like world where a symbolic penny represents the corrupting lure of materialism. A boy gazes from a sewage hole, drawn by a dropped coin. 
 </p>
     </div>
     <div class="project-card">
       <h2>KnightMares Hoodie</h2>
-      <img src="images/km.png" alt="km">
+      <img src="images/km.png" alt="km" class="thumbnail" onclick="openPopup(this.src)">
       <p>Medium: Procreate</p>
       <p> Merch design for my robotics team, KnightMares robotics (Titanium Knights)</p>
     </div>
+    <div class="popup" id="popup" onclick="closePopup()">
+      <img id="popup-img" src="">
+    </div>
+    <script>
+    function openPopup(imageSrc) {
+      document.getElementById("popup-img").src = imageSrc;
+      document.getElementById("popup").style.display = "flex";
+    }
+
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+  </script>
   </main>
 </body>
 </html>
