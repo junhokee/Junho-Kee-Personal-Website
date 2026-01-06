@@ -55,6 +55,12 @@ p{
   color: #ffffff;
   font-weight: bold;
 }
+.project-decription {
+  font-size: 20px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
 
 .content-box2 img{
   width: 100%;
